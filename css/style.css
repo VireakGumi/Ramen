@@ -1,0 +1,361 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    /* background-color: brown; */
+    background-image: linear-gradient( #730711 , #A71D31 );
+    color: white;
+    display: grid;
+    grid-template-rows: 80px 450px 450px 400px 450px 400px 200px 150px;
+    grid-template-areas: 
+    "nav nav nav nav nav nav nav nav"
+    "head head head head head head head head"
+    "menu menu menu menu menu menu menu menu"
+    "cate cate cate cate cate cate cate cate"
+    "pro pro pro pro pro pro pro pro"
+    "about about about about about about about about"
+    "service service service service service service service service"
+    "foot foot foot foot foot foot foot foot"
+    ;
+
+}
+nav , .logo , ul , .nav-center , .text-logo, .header ,  .header-left , .header-left button, .header-left h1 , .menu , .center-icon  , .sub-table , .text-table , .categories , .sub-cate , .product , .sub-pro , .card , .text-pro , footer{
+    display: flex;
+}
+nav{
+    grid-area:  nav;
+}
+nav  , .text-logo , .logo ,  .header-left button , .menu , .sub-table , .text-table , .categories , .product, .card , .center-icon , footer{
+    align-items: center;
+}
+.logo , .text-logo , .header-left , .menu , .categories , .sub-cate , .product{
+    justify-content: center;
+}
+.logo , .text-logo , .header-left , .header-left h1 , .menu , .categories , .product , .card , .text-pro{
+    flex-direction: column; 
+}
+.logo h5 , .logo p{
+    margin-top: 0;
+    margin-bottom:  0;
+}
+.logo{
+    flex: 1;
+    margin-left: -30px;
+}
+.logo p{
+    font-size: 10px;
+}
+.nav-center{
+    flex: 4;
+}
+ul{
+    width: 80%;
+}
+ul li:nth-child(1){
+    list-style: none;
+}
+li a{
+    margin-left: 10px;
+}
+a  , .text-logo , li , .header-left button , .header , .menu{
+    color: white;
+    text-decoration: none ;
+}
+ul{
+    justify-content: space-around;
+}
+.nav-center button{
+    border: none;
+    background-color: orange;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+.header{
+    grid-area: head;
+}
+.header-left{
+    flex: 1;
+    padding: 0px 50px;
+    margin: -10px 10px;
+}
+.header-left button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: 0px 20px 0px 0px;
+}
+.header-left button i{
+    background-color: orange;
+    padding:10px 15px;
+    margin-right: 10px;
+}
+.header-img{
+    flex: 1;
+}
+.menu{
+    grid-area: menu;
+}
+.center-icon{
+    margin-right: 10px;
+}
+.table{
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sub-table{
+    background-color: rgba(255, 255, 255, 0.404);
+    padding: 1px ;
+    justify-content: space-between;
+}
+.sub-table i{
+    color: orange;
+}
+.right-icon{
+    background-color: rgba(255, 255, 255, 0.404);  
+    padding: 30px 40px;
+}
+.sub-table:hover {
+    background-color: white;
+    color:  grey;
+}
+.sub-table:hover .right-icon i{
+    color: white;
+}
+.sub-table:hover .right-icon{
+    background-color: orange;
+}
+.text-table{
+    justify-content: space-between;
+}
+.text-table{
+    width: 60%;
+}
+.categories{
+    grid-area: cate;
+    margin-top: 100px;
+}
+.sub-cate{
+    width: 100%;
+}
+.pic-cate{
+    background: url(../img/l-intro-1655408349.jpg) top right;
+    background-size: cover;
+    height: 180px;
+    color: white;
+    border:  10px solid snow;
+    width: 27%;
+    margin: 40px;
+    font-size: larger;
+    border-radius: 5px;
+}
+.product{
+    grid-area: pro;
+}
+.card{
+    background-color: rgba(173, 13, 13, 0.884);
+    border:2px solid rgb(204, 204, 204);
+    margin: 30px;
+    width: 50%;
+    padding: 5px 7px 0px 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 2px;
+}
+.star{
+    margin: -15px 0px;
+    color: orange;
+}
+.text-pro{
+    justify-content: flex-start;
+}
+.card button {
+    display: flex;
+    margin-left: auto;
+    border: none;
+    border-top-left-radius: 25px;
+    padding: 10px 15px;
+    background-color: orange;
+    color: white;
+    margin: -15px -7.5px -0.5px auto;
+}
+.about{
+    grid-area: about;
+    display: flex;
+}
+.service{
+    grid-area: service;
+    display: grid;
+    place-items: center;
+}
+.header-service , .text-ser{
+    display: flex;
+}
+.header-service{
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: 25%;
+    border-radius: 20px;
+}
+.text-ser{
+    font-size: smaller;
+    color: brown;
+    margin-top: -20px;
+}
+.text-ser span{
+    color: orange;
+}
+footer{
+    grid-area: foot;
+    padding-left: 50px;
+}   
+footer ul li{
+    margin-left: 50px;
+}
+.nav-right{
+    flex: 1.5;
+    margin-right: 50px;
+}
+.button{
+    display: flex;
+    border: 2px solid gray;
+}
+.button input{
+    width: 100%;
+    outline:  none;
+}
+.button button , .button input{
+    border: none;
+    padding: 5px;
+    color: white;
+}
+.button button{
+    background-color: orange;
+}
+@media (max-width:900px){
+    .container{
+        font-size:13px;
+    }
+    ul li:nth-child(even) , .header-left p span , .sub-pro .card:nth-child(4){
+        display: none;
+    }
+    nav ul{
+        width: 70%;
+    }
+    .header-img img{
+        width: 450px;
+    }
+    .header-img{
+        display: flex;
+        align-items: center;
+    }
+    .header-left{
+        margin: 0;
+    }
+    .table{
+        width: 90%;
+    }
+    .pic-cate{
+        height: 120px;
+        width: 39%;
+    } 
+    .card{
+        margin: 0px 5px;
+    }
+    footer ul{
+        width: 80%;
+    }
+    .header-service{
+        width: 40%;
+    }
+    .nav-right{
+        flex: 2;
+        display: grid;
+        place-items: flex-start;
+        font-size: smaller; 
+    }
+}
+@media (max-width:500px){
+    .container{
+        font-size: x-small;    
+        grid-template-rows:100px 380px 166px 400px 450px 250px 90px 150px ;
+        padding: 0;
+    }
+    nav{
+        background-color: #730711;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 10px 20px 10px 0px;
+    }
+    nav .text-logo,nav button a span,footer .nav-center , .menu p , .menu .center-icon , .header .header-left p , .header-left button,.sub-pro .card:nth-child(even){
+        display: none;
+    }
+    nav .logo{
+        flex: 0;
+        margin-left: 15px;
+    }
+    nav .nav-center{
+        flex: 6;
+        justify-content: flex-start;
+    }
+    nav button a{
+        font-size: x-small;
+    }
+    .header {
+        font-size: medium;
+    }
+    .header , .about , .header-left h1, .sub-cate{
+        align-items: center;
+    }
+    .header-img img{
+        width: 100%;
+    }
+    .right-icon{
+        margin-left: auto;
+        padding: 15px;
+    }
+    .table{
+        width: 90%;
+    }
+    .pic-cate{
+        height: 140px;
+        width: 80%;
+        margin: 10px;
+    } 
+    .sub-cate , .header {
+        flex-direction: column;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .card , .star i{
+        font-size: small;
+    }
+    .card img{
+        width:130px;
+    }
+    nav ul{
+        width: 100%;
+        list-style: none;
+    }
+    .header-service{
+        width: 55%;
+        font-size: 11px;
+    }
+    .nav-right{
+        flex: 1.5;
+        place-items: flex-end;
+    }
+    .button input , .button button{
+        padding: 1px;
+    }
+    footer .logo img{
+         width: 60px;
+    }
+
+}
