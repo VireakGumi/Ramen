@@ -21,19 +21,20 @@ body{
     ;
 
 }
-nav , .logo , ul , .nav-center , .text-logo, .header ,  .header-left , .header-left button, .header-left h1 , .menu , .center-icon  , .sub-table , .text-table , .categories , .sub-cate , .product , .sub-pro , .card , .text-pro , footer{
+nav , .logo , ul , .nav-center , .text-logo, .header ,  .header-left , .header-left button, .header-left h1 , .menu , .center-icon  , .sub-table , .text-table , .categories , .sub-cate, .pic-cate h4 , .product , .sub-pro , .card , .text-pro , footer , .header-img{
     display: flex;
 }
 nav{
     grid-area:  nav;
+    width: 100%;
 }
-nav  , .text-logo , .logo ,  .header-left button , .menu , .sub-table , .text-table , .categories , .product, .card , .center-icon , footer{
+nav  , .text-logo , .logo ,  .header-left button , .header-img , .menu , .sub-table , .text-table , .categories , .product, .card , .center-icon , footer{
     align-items: center;
 }
 .logo , .text-logo , .header-left , .menu , .categories , .sub-cate , .product{
     justify-content: center;
 }
-.logo , .text-logo , .header-left , .header-left h1 , .menu , .categories , .product , .card , .text-pro{
+.logo , .text-logo , .header-left , .header-left h1 , .menu , .categories , .product , .card , .text-pro , .pic-cate h4{
     flex-direction: column; 
 }
 .logo h5 , .logo p{
@@ -41,30 +42,25 @@ nav  , .text-logo , .logo ,  .header-left button , .menu , .sub-table , .text-ta
     margin-bottom:  0;
 }
 .logo{
-    flex: 1;
-    margin-left: -30px;
+    width: 20%;
 }
 .logo p{
     font-size: 10px;
 }
 .nav-center{
-    flex: 4;
-}
-ul{
     width: 80%;
 }
-ul li:nth-child(1){
-    list-style: none;
+ul{
+    width:80% ;
+    flex-shrink: 1;
+    justify-content: space-around;
 }
-li a{
-    margin-left: 10px;
+ul li{
+    list-style: none;
 }
 a  , .text-logo , li , .header-left button , .header , .menu{
     color: white;
     text-decoration: none ;
-}
-ul{
-    justify-content: space-around;
 }
 .nav-center button{
     border: none;
@@ -145,7 +141,8 @@ ul{
     height: 180px;
     color: white;
     border:  10px solid snow;
-    width: 27%;
+    width: 30%;
+    padding-left: 10px;
     margin: 40px;
     font-size: larger;
     border-radius: 5px;
@@ -215,7 +212,7 @@ footer ul li{
     margin-left: 50px;
 }
 .nav-right{
-    flex: 1.5;
+    width: 20%;
     margin-right: 50px;
 }
 .button{
@@ -234,23 +231,22 @@ footer ul li{
 .button button{
     background-color: orange;
 }
-@media (max-width:900px){
+@media (max-width:1024px){
     .container{
         font-size:13px;
     }
-    ul li:nth-child(even) , .header-left p span , .sub-pro .card:nth-child(4){
+    ul li:nth-child(even) , .header-left p span ,  .sub-pro .card:nth-child(4){
         display: none;
     }
     nav ul{
         width: 70%;
-    }
-    .header-img img{
-        width: 450px;
+        font-size: medium;
     }
     .header-img{
         display: flex;
         align-items: center;
     }
+
     .header-left{
         margin: 0;
     }
@@ -271,16 +267,16 @@ footer ul li{
         width: 40%;
     }
     .nav-right{
-        flex: 2;
+        width: 20%;
         display: grid;
         place-items: flex-start;
         font-size: smaller; 
     }
 }
-@media (max-width:500px){
+@media (max-width:700px){
     .container{
         font-size: x-small;    
-        grid-template-rows:100px 380px 166px 400px 450px 250px 90px 150px ;
+        grid-template-rows:100px 380px 166px 400px 450px 350px 90px 150px ;
         padding: 0;
     }
     nav{
@@ -296,11 +292,10 @@ footer ul li{
         display: none;
     }
     nav .logo{
-        flex: 0;
+        width: 15%;
         margin-left: 15px;
     }
     nav .nav-center{
-        flex: 6;
         justify-content: flex-start;
     }
     nav button a{
@@ -312,9 +307,6 @@ footer ul li{
     .header , .about , .header-left h1, .sub-cate{
         align-items: center;
     }
-    .header-img img{
-        width: 100%;
-    }
     .right-icon{
         margin-left: auto;
         padding: 15px;
@@ -323,9 +315,10 @@ footer ul li{
         width: 90%;
     }
     .pic-cate{
-        height: 140px;
+        height: 120px;
         width: 80%;
         margin: 10px;
+        font-size: 15px;
     } 
     .sub-cate , .header {
         flex-direction: column;
@@ -342,20 +335,23 @@ footer ul li{
     nav ul{
         width: 100%;
         list-style: none;
+        font-size: 13px;
     }
     .header-service{
         width: 55%;
         font-size: 11px;
     }
     .nav-right{
-        flex: 1.5;
+        width: 80%;
         place-items: flex-end;
     }
     .button input , .button button{
         padding: 1px;
     }
+    footer .logo{
+        width: 40%;
+    }
     footer .logo img{
          width: 60px;
     }
-
 }
